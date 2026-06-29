@@ -1,0 +1,46 @@
+# Sistema de Alerta y Diagnóstico de Brecha Digital
+
+### Estuante 
+Oscar Mazon
+### Objetivo del Sistema
+Analizar cuantitativa y cualitativamente el estado de exclusión tecnológica en distintas comunidades o regiones vulnerables mediante un software interactivo en Python. El sistema procesa variables de conectividad y educación para priorizar de forma automática las zonas que requieren intervención urgente del Estado o de ONGs.
+
+### Descripción de Funcionalidades
+1. **Módulo de Entrada de Datos:** Captura interactiva del nombre de la región, población y hábitos de acceso tecnológico.
+2. **Estructura de Control Lógica:** Implementa condicionales anidadas para ponderar el nivel de brecha digital.
+3. **Módulo Repetitivo:** Uso de bucles `while` que permiten procesar múltiples comunidades en una sola corrida sin reiniciar el sistema.
+4. **Reporte Consolidado:** Almacenamiento en estructuras de datos dinámicas (listas y diccionarios) para la impresión de un reporte ejecutivo final.
+
+### Fecha
+Junio 2026
+
+
+Diagrama de Funcionalidad y Arquitectura (Texto/Pseudocódigo)
+[INICIO]
+   │
+   ▼
+[Ciclo Principal: Mientras el usuario quiera registrar]
+   │
+   ├──► Ingresar: Nombre, Población
+   ├──► Preguntar: ¿Internet? (S/N) -> ¿Dispositivos? (S/N) -> ¿Educación? (S/N)
+   │
+   ├──► [Cálculo Lógico]
+   │       Evaluar respuestas mediante condicionales IF-ELIF-ELSE
+   │       Asignar puntaje acumulativo de exclusión digital
+   │
+   ├──► [Clasificación]
+   │       Puntaje >= 80  --> Prioridad ALTA  --> Plan: Infraestructura Crítica
+   │       Puntaje >= 40  --> Prioridad MEDIA --> Plan: Centros Digitales
+   │       Puntaje < 40   --> Prioridad BAJA  --> Plan: Monitoreo
+   │
+   ├──► Guardar datos en Lista de Comunidades
+   │
+   └──► ¿Registrar otra comunidad? 
+           ├──► SÍ (Repite el ciclo)
+           └──► NO (Rompe el ciclo)
+   │
+   ▼
+[Imprimir Reporte General consolidando la evidencia de todas las regiones]
+   │
+   ▼
+ [FIN]
